@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "PagoApp",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -35,6 +35,7 @@
     "@angular/compiler-cli": "^14.0.0",
     "@angular/language-service": "^14.0.0",
     "@ionic/angular-toolkit": "^6.0.0",
+    "@ionic/lab": "3.2.13",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
