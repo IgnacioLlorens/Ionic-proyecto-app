@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -13,7 +13,10 @@ export class LoginPage implements OnInit {
 
   usuario :any;
   pass :any;
-  constructor(private toastController:ToastController,private router:Router,private usuarioService: UsuarioService) { }
+  modalCtrl : any;
+  showPassword = false;
+  passwordToggleIcon = 'eye';
+  constructor(private toastController:ToastController,private router:Router,private usuarioService: UsuarioService, private alertController : AlertController) { }
 
   ngOnInit() {
   }
@@ -57,5 +60,15 @@ export class LoginPage implements OnInit {
     toast.present();
   }
 
+  togglePassword():void{
+    this.showPassword = !this.showPassword;
+
+
+    if (this.passwordToggleIcon == 'eye'){
+      this.passwordToggleIcon = 'eye-off';
+    }else{
+      this.passwordToggleIcon = 'eye';
+    }
+  }
 
 }

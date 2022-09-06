@@ -12,7 +12,8 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">contaseña</ion-label>
-        <ion-input type="password" [(ngModel)]="pass"></ion-input>
+        <ion-input name="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="pass"></ion-input>
+        <ion-icon position="floating" slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
       </ion-item>
       <div>
       <ion-button (click)="login()" expand="block">ingresar</ion-button>
